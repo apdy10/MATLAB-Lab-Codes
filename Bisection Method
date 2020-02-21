@@ -1,0 +1,16 @@
+clc;
+a=5;
+b=6;
+c=(a+b)/2;
+f= @(x) (x^2)-29;
+err = 0.0001;
+while abs(a-b)>err
+    c=(a+b)/2;
+    if(f(a)*f(c)>0)
+        a=c;
+    elseif (f(a)*f(c)<0)
+        b=c;
+    end
+end
+disp(c);
+
