@@ -1,0 +1,12 @@
+clc
+g = @(x)  0.5*(atan(4*x)+x);
+e=0.001;
+er=1000;
+a=input('approx');
+while er>e
+        b=g(a);
+        disp(b);
+        er = abs(b-a);
+        a=b;
+end
+disp(a);
